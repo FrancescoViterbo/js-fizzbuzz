@@ -7,6 +7,8 @@ btnGenera.addEventListener("click", generaNumeri);
 function generaNumeri (e) {
     e.preventDefault();
 
+    listaNumeri.innerHTML = "";
+
     let numeroDiPartenza = parseInt(numeroPartenza.value);
 
     for (i = numeroDiPartenza; i < (numeroDiPartenza + 100); i++) {
