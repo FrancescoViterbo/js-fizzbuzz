@@ -7,13 +7,12 @@ btnGenera.addEventListener("click", generaNumeri);
 function generaNumeri (e) {
     e.preventDefault();
 
-    let numeroDiPartenza = numeroPartenza.value;
-    for (i = numeroDiPartenza; i < numeroDiPartenza + 100; i++) {
+    let numeroDiPartenza = parseInt(numeroPartenza.value);
+
+    for (i = numeroDiPartenza; i < (numeroDiPartenza + 100); i++) {
         var listItem = document.createElement("li");
-        // if (i = 0) {
-        //     listItem.innerHTML = "0";
-        // } 
-        if (i === 0) {
+         
+        if (i === "0") {
             listItem.innerHTML = "0";
         } else if ((i % 3) === 0 && (i % 5) === 0) {
             listItem.innerHTML = "FizzBuzz";
